@@ -1,0 +1,66 @@
+.contact_form {
+  display: flex;
+  padding-left: 250px;
+  gap: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact_label {
+}
+
+.contact_name_input,
+.contact_number_input {
+  display: block;
+  max-width: 300px;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  transition: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.contact_name_input:is(:hover, :focus),
+.contact_number_input:is(:hover, :focus) {
+  box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+}
+
+.contact_number_input {
+  margin-bottom: 10px;
+}
+
+.contact_submit_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 24px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: rgb(211, 211, 213);
+  transition: background-color, color, scale;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.contact_submit_btn:is(:hover, :focus) {
+  scale: 1.05;
+  color: white;
+  background-color: rgb(88, 88, 89);
+}

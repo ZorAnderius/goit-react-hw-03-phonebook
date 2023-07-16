@@ -1,0 +1,19 @@
+.phonebook-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  color: rgb(57, 57, 57);
+}
+
+.contact-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(42, 42, 42);
+}

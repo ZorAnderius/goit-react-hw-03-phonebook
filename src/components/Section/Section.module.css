@@ -1,0 +1,32 @@
+.first-container {
+  max-width: 800px;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+
+  padding: 20px;
+
+  margin: auto;
+
+  background-color: rgb(243, 244, 245);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -moz-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+}
+
+.second-container {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+
+  padding: 20px;
+  padding-bottom: 40px;
+  margin: auto;
+
+  background-color: rgb(243, 244, 245);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+  -moz-box-shadow: 5px 5px 10px 5px rgba(90, 89, 89, 0.75);
+}

@@ -1,0 +1,32 @@
+.filter_container {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.filter_label {
+}
+
+.filter_input {
+  display: block;
+  max-width: 300px;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.25);
+  transition: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.filter_input:is(:hover, :focus) {
+  box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(153, 154, 153, 0.75);
+}

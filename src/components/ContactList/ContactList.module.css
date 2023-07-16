@@ -1,0 +1,82 @@
+.contact_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact_item {
+  padding: 10px 30px;
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  color: black;
+
+  background-color: rgb(167, 169, 170);
+  border-radius: 5px;
+
+  transition: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.contact_item:nth-child(2n) {
+  background-color: rgb(254, 253, 251);
+  box-shadow: 0px 0px 2px 1px rgb(149, 145, 145) inset;
+  -webkit-box-shadow: 0px 0px 2px 1px rgb(149, 145, 145) inset;
+  -moz-box-shadow: 0px 0px 2px 1px rgb(149, 145, 145) inset;
+
+  transition: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.contact_item:is(:hover, :focus),
+.contact_item:nth-child(2n):is(:hover, :focus) {
+  color: white;
+  background-color: rgb(98, 98, 133);
+}
+
+.contact_text_wrap {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact_name {
+}
+.contact_number {
+}
+
+.contact_delete_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100px;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: rgb(211, 211, 213);
+  transition: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.contact_delete_btn:is(:hover, :focus) {
+  color: rgb(39, 38, 38);
+  background-color: white;
+}
