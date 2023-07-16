@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ZorAnderius.github.io/goit-react-hw-03-phonebook/static/css/main.270cf478.css",
+    "main.js": "/ZorAnderius.github.io/goit-react-hw-03-phonebook/static/js/main.09284467.js",
+    "index.html": "/ZorAnderius.github.io/goit-react-hw-03-phonebook/index.html",
+    "main.270cf478.css.map": "/ZorAnderius.github.io/goit-react-hw-03-phonebook/static/css/main.270cf478.css.map",
+    "main.09284467.js.map": "/ZorAnderius.github.io/goit-react-hw-03-phonebook/static/js/main.09284467.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.270cf478.css",
+    "static/js/main.09284467.js"
+  ]
+}
