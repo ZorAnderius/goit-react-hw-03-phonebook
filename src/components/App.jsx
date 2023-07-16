@@ -10,15 +10,11 @@ import appCSS from './App.module.css';
 import contacts from './contacts_data.json';
 import { Notification } from './Notification/Notification';
 
-let keyOfStorage = true;
-
 const STORAGE_KEY = 'contacts';
-const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-const initalArr = storage && storage.length ? storage : contacts;
 
 export class App extends Component {
   state = {
-    contacts: initalArr,
+    contacts: [],
     filter: '',
   };
 
@@ -38,10 +34,8 @@ export class App extends Component {
         );
         return;
       }
-      const newContactsList = [...prevState.contacts, contact];
 
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newContactsList));
-      return { contacts: newContactsList };
+      return { contacts: [...prevState.contacts, contact] };
     });
   };
 
@@ -50,14 +44,8 @@ export class App extends Component {
       const newContactList = prevState.contacts.filter(
         contact => contact.id !== contactID
       );
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newContactList));
-
       return { contacts: newContactList };
     });
-  };
-
-  initLocalStorage = () => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(this.state.contacts));
   };
 
   checkSameContact = () => {
@@ -68,12 +56,24 @@ export class App extends Component {
     );
   };
 
-  render() {
-    if (keyOfStorage) {
-      this.initLocalStorage();
-      keyOfStorage = false;
-    }
+  componentDidMount() {
+    const storageData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const initalArr =
+      storageData && storageData.length ? storageData : contacts;
 
+    this.setState({ contacts: initalArr });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const currentContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
+
+    if (currentContacts !== prevContacts) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentContacts));
+    }
+  }
+
+  render() {
     const { filter } = this.state;
     const contactsCount = this.state.contacts.length;
     const filterList = this.checkSameContact();
